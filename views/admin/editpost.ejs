@@ -1,0 +1,14 @@
+<form action="/edit-question/<%= data._id %>" method="POST" class="new-question-form">
+  <textarea name="question" placeholder="Enter the question here"><%= data.question %></textarea>
+
+  <input type="text" placeholder="Enter option A here" name="optionA" value="<%= data.choices.get('a') %>">
+  <label for="">
+    <%= data.choices['a'] %> 
+    </label>
+  <input type="text" placeholder="Enter option B here" name="optionB" value="<%= data.choices.get('b') %>">
+  <input type="text" placeholder="Enter option C here" name="optionC" value="<%= data.choices.get('c') %>">
+  <input type="text" placeholder="Enter option D here" name="optionD" value="<%= data.choices.get('d') %>">
+  <input type="text" placeholder="Enter the correct option here" name="correctAnswer" value="<%= data.correctOption %>">
+
+  <input type="submit" value="Confirm Changes">
+</form>

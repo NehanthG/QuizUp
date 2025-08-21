@@ -1,0 +1,11 @@
+<div class="home-container">
+  <h2 class="leaderboard-title">Leader Board</h2>
+  <ul class="leaderboard-list">
+    <% data.forEach((element, index) => { %>
+      <li class="leaderboard-item">
+        <span>#<%= index + 1 %> - <a href="/person/<%= element._id %>"><%= element.username %></a></span>
+        <p class="leaderboard-score"><%= element.score %></p>
+      </li>
+    <% }) %>
+  </ul>
+</div>

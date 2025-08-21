@@ -1,0 +1,26 @@
+
+</div>
+
+<div class="home-container">
+
+    <% if (hours>=2 && hours<12) { %>
+    
+        <h2>Good Morning <%= username %>!</h2>
+    <% } else if (hours>=12 && hours<18) { %>
+    
+        <h2>Good Afternoon <%= username %>!</h2>
+    <% }else{ %>
+        <h2>Good Evening <%= username %>!</h2>
+        <%}%>
+    <h2 style="margin-top: 20px;">Available Questions</h2>
+    <ul>
+        <% data.forEach(element => { %>
+            <li>
+                <a href="/question/<%= element._id %>">
+                    <%= element.question %>
+                </a>
+            </li>
+        <% }) %>
+    </ul>
+   
+</div>

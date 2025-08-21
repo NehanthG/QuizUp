@@ -1,0 +1,14 @@
+<div class="home-container">
+  <h2 class="leaderboard-title">Users List</h2>
+  <ul class="leaderboard-list">
+    <% data.forEach((element, index) => { %>
+      <li class="leaderboard-item">
+        <span>#<%= index + 1 %> - <a href="/person/<%= element._id %>"><%= element.username %></a></span>
+        <p class="leaderboard-score"><%= element.score %></p>
+        <form action="/delete-user/<%= element._id %>" method="POST">
+            <input type="submit" value="Delete User">
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+</div>

@@ -1,0 +1,589 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout */
+body {
+  background-color: #121212;
+  color: #FFFFFF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Header */
+.header {
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #2C2C2C;
+}
+
+.header a {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header__button {
+  display: flex;
+  align-items: center;
+}
+
+.searchBtn {
+  padding: 0.4rem 0.8rem;
+  background-color: #00BFA6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #121212;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.searchBtn:hover {
+  background-color: #00A08D;
+}
+
+/* Auth Container */
+.auth-container {
+  background-color: #1E1E1E;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.03);
+  text-align: center;
+  border: 1px solid #2C2C2C;
+}
+
+.auth-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: left;
+}
+
+.auth-container label {
+  color: #FFFFFF;
+}
+
+.auth-container input[type="text"],
+.auth-container input[type="password"] {
+  padding: 0.75rem;
+  border: 1px solid #2C2C2C;
+  border-radius: 6px;
+  background-color: #121212;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+.auth-container input::placeholder {
+  color: #B0B0B0;
+}
+
+.auth-container input[type="text"]:focus,
+.auth-container input[type="password"]:focus {
+  outline: 2px solid #FFD700;
+}
+
+.auth-container input[type="submit"] {
+  padding: 0.75rem;
+  background-color: #00BFA6;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth-container input[type="submit"]:hover {
+  background-color: #00A08D;
+}
+
+.auth-container h5 {
+  font-weight: normal;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: #B0B0B0;
+}
+
+.auth-container h5 a {
+  color: #00BFA6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-container h5 a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: #1E1E1E;
+  color: #B0B0B0;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  font-size: 0.8rem;
+  border-top: 1px solid #2C2C2C;
+}
+
+
+
+/* Home Page (List of Questions) */
+.home-container {
+  padding: 2rem;
+  color: #FFFFFF;
+}
+
+.home-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home-container li {
+  background-color: #1E1E1E;
+  border: 1px solid #2C2C2C;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: background-color 0.2s;
+}
+
+.home-container li:hover {
+  background-color: #2C2C2C;
+}
+
+.home-container a {
+  text-decoration: none;
+  color: #00BFA6;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.home-container a:hover {
+  color: #00A08D;
+}
+
+
+/* Question Attempt Form */
+.question-form {
+  background-color: #1E1E1E;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  border: 1px solid #2C2C2C;
+  max-width: 600px;
+  margin-inline: auto;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.question-form b {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.question-form label {
+  display: block;
+  background-color: #121212;
+  border: 1px solid #2C2C2C;
+  padding: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: #B0B0B0;
+}
+
+.question-form label:hover {
+  background-color: #2C2C2C;
+}
+
+.question-form input[type="radio"] {
+  margin-right: 0.8rem;
+}
+
+.question-form button {
+  padding: 0.8rem;
+  background-color: #00BFA6;
+  color: #121212;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.question-form button:hover {
+  background-color: #00A08D;
+}
+
+
+/* Register Form (Shared Auth Styles) */
+.register-container {
+  background-color: #1E1E1E;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin-inline: auto;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #FFFFFF;
+  border: 1px solid #2C2C2C;
+}
+
+.register-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.register-container label {
+  color: #FFFFFF;
+}
+
+.register-container input[type="text"],
+.register-container input[type="password"] {
+  padding: 0.75rem;
+  border: 1px solid #2C2C2C;
+  border-radius: 6px;
+  background-color: #121212;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+.register-container input::placeholder {
+  color: #B0B0B0;
+}
+
+.register-container input:focus {
+  outline: 2px solid #FFD700;
+}
+
+.register-container input[type="submit"] {
+  padding: 0.75rem;
+  background-color: #00BFA6;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.register-container input[type="submit"]:hover {
+  background-color: #00A08D;
+}
+
+
+body {
+  background-color: #121212;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+}
+
+.form-container {
+  background-color: #1E1E1E;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 4rem auto;
+  border: 1px solid #2C2C2C;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.75rem;
+  background-color: #121212;
+  color: #FFFFFF;
+  border: 1px solid #2C2C2C;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #B0B0B0;
+}
+
+input[type="submit"].form-button {
+  background-color: #00BFA6;
+  color: #121212;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+input[type="submit"].form-button:hover {
+  background-color: #00A08D;
+}
+
+
+
+.dashboard {
+  padding: 2rem;
+  color: #FFFFFF;
+}
+
+.dashboard h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard a {
+  color: #00BFA6;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 1rem;
+}
+
+.dashboard a:hover {
+  color: #00A08D;
+}
+
+.dashboard ul {
+  list-style: none;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+}
+
+.dashboard li {
+  background-color: #1E1E1E;
+  padding: 1rem;
+  border: 1px solid #2C2C2C;
+  border-radius: 8px;
+}
+
+.dashboard form {
+  display: inline;
+}
+
+.dashboard input[type="submit"] {
+  background-color: #E74C3C;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.dashboard input[type="submit"]:hover {
+  background-color: #C0392B;
+}
+
+
+.new-question-form {
+  background-color: #1E1E1E;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 600px;
+  border: 1px solid #2C2C2C;
+  border-radius: 10px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.new-question-form textarea {
+  resize: vertical;
+  min-height: 100px;
+  background-color: #121212;
+  border: 1px solid #2C2C2C;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+.new-question-form input[type="text"] {
+  padding: 0.75rem;
+  background-color: #121212;
+  color: #FFFFFF;
+  border: 1px solid #2C2C2C;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.new-question-form input::placeholder,
+.new-question-form textarea::placeholder {
+  color: #B0B0B0;
+}
+
+.new-question-form input:focus,
+.new-question-form textarea:focus {
+  outline: 2px solid #FFD700;
+}
+
+.new-question-form input[type="submit"] {
+  padding: 0.75rem;
+  background-color: #00BFA6;
+  color: #121212;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.new-question-form input[type="submit"]:hover {
+  background-color: #00A08D;
+}
+
+
+.logout-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.logout-button {
+  padding: 0.4rem 0.8rem;
+  background-color: #E74C3C;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #FFFFFF;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.logout-button:hover {
+  background-color: #C0392B;
+  transform: scale(1.03);
+}
+
+.logout-button:active {
+  transform: scale(0.96);
+}
+
+/* Leaderboard Specific Styling */
+.leaderboard-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #FFD700;
+}
+
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.leaderboard-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1E1E1E;
+  border: 1px solid #2C2C2C;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease;
+}
+
+.leaderboard-item:hover {
+  background-color: #2C2C2C;
+}
+
+.leaderboard-item a {
+  color: #00BFA6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.leaderboard-item a:hover {
+  color: #00A08D;
+}
+
+.leaderboard-score {
+  color: #FFD700;
+  font-weight: bold;
+}

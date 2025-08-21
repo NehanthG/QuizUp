@@ -1,0 +1,28 @@
+<form action="/question/<%= data._id %>" method="POST" class="question-form">
+    <b><%= data.question %></b>
+
+    <label>
+        <input type="radio" value="a" name="selectedOption">
+        <%= data.choices['a'] %>
+    </label>
+    <label>
+        <input type="radio" value="b" name="selectedOption">
+        <%= data.choices['b'] %>
+    </label>
+    <label>
+        <input type="radio" value="c" name="selectedOption">
+        <%= data.choices['c'] %>
+    </label>
+    <label>
+        <input type="radio" value="d" name="selectedOption">
+        <%= data.choices['d'] %>
+    </label>
+
+    <button type="submit">Submit Answer</button>
+    <% if (message==="Your answer is wrong!!") { %>
+        <h2 style="color: red"><%= message %></h2>
+        <% }else { %>
+            <h2 style="color: green;"><%= message %></h2>
+        <% } %>
+     
+</form>
